@@ -6,6 +6,7 @@ const Home = () => {
     <div className='home'>
         <Header logo='Ali Ahmad'/>
         <Hero/>
+        <h1>I Am Ali Ahmad..</h1>
     </div>
   )
 }
