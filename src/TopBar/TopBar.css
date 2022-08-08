@@ -1,0 +1,74 @@
+nav{
+    /* width: 100%; */
+    padding: 0.8rem 1rem;
+    position: fixed;
+    right: 0;
+    margin: 1.3rem 2rem 0;
+    /* width: calc(100vw - (100vw - 100%) - calc(2rem * 2) - 260px); */
+    border-radius: 0.428rem;
+    z-index: 12;
+    box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+    background-color: white;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+nav ul li a{
+    color: #6E6B7B !important;
+    padding: 0 0.5rem !important;
+    position: relative;
+}     
+
+svg{
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    font-size: 1.5rem !important;
+    color: #6E6B7B !important;
+    vertical-align: middle !important;
+}
+
+nav ul{
+    list-style: none;
+margin: 0;
+}
+
+ul.icons svg:hover {
+    color: #7367F0 !important;
+}
+
+.tooltip1{
+position: relative;
+transition: all 0.3s ease-in-out;    
+}
+
+.tooltip1::before{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    width: 50px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    content: attr(title);
+    font-size: 11px;
+    font-weight: 700;
+    top: calc(100% + 5px);
+    left: -10%;
+}
+
+    .tooltip1::after{
+        position: absolute;
+        z-index: 1;
+        display: none;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        content: "";
+        bottom: -20%;
+        left: 35%;
+        border-bottom-color: black;
+    }
+    .tooltip1:hover::before , .tooltip1:hover::after{
+        display: inline-block;  
+    }

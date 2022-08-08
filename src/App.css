@@ -1,0 +1,7 @@
+.reports {
+  display: flex !important;
+  height: 90vh !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 3rem !important;
+}

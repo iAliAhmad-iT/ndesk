@@ -1,0 +1,59 @@
+/* Globally Style */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    font-family: 'Montserrat' !important;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+    font-family: 'Arial', Helvetica, Arial, serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #6E6B7B;
+    text-align: left;
+    background-color: #F8F8F8;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #6E6B7B ;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:  #7367F0 !important;
+    border: 1px solid  !important;
+    border-color: #7367F0;
+    padding: 0.786rem 1.5rem !important;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: 0.358rem;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background 0s, border 0s;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background 0s, border 0s;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border: 0px !important;
+    /* border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    /* border-bottom: 0; */
+    /* border-left: 0.3em solid transparent; */ 
+/* }
+
+.avatar .avatar-content {
+    width: 32px;
+    height: 32px ;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 12px !important;
+} */

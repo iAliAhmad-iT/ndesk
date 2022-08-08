@@ -1,12 +1,9 @@
 import React from 'react'
-import Header from '../Components/Header'
-import Hero from '../Components/Hero'
+import TopBar from '../TopBar/TopBar'
 const Home = () => {
   return (
     <div className='home'>
-        <Header logo='Ali Ahmad'/>
-        <Hero/>
-        <h1>I Am Ali Ahmad..</h1>
+        <TopBar/>
     </div>
   )
 }
