@@ -57,3 +57,24 @@ body {
     display: flex;
     font-size: 12px !important;
 } */
+
+
+/* .flatpickr-input{
+    border-radius: 4px !important;
+    border-color:lightgray;
+  }
+
+  .flatpickr-input:active{
+    border: none !;
+  }
+
+  .flatpickr-input:focus{
+    box-shadow: none;
+    outline: none;
+    border-color: rgb(115, 103, 240) !important;
+  } */
+  .form-control:disabled, .form-control[readonly] {
+    background-color:transparent !important;
+    opacity: 1;
+    max-width: 11.21rem;
+}

@@ -1,0 +1,51 @@
+.send-invoice-btn:focus , .send-invoice-btn:active{
+box-shadow: none !important;
+}
+
+.modal{
+    padding: 0;
+}
+
+/* .modal-dialog{
+    margin: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    min-width: 450px;
+} */
+.modal-dialog {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: auto !important;
+    margin: 0 !important;
+    min-width: 450px !important;
+    /* width: 20rem !important; */
+}
+
+.modal-content {
+    overflow: auto !important;
+    border-radius: 0 !important;
+    height: 100% !important;
+    border-radius: 0px;
+}
+
+.badge.badge-light-primary {
+    background-color: rgba(115, 103, 240, 0.12);
+    color: #7367F0 !important;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.align-middle{
+    font-weight: 600 !important;
+}
+
+.badge svg {
+    height: 12px;
+    width: 11px;
+    font-size: 12px;
+    stroke-width: 3;
+    vertical-align: sub;
+}

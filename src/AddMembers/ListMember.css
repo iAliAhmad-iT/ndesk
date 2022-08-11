@@ -143,3 +143,8 @@ thead .sorting_desc:after {
     content: '';
     position: absolute;
 }
+
+
+.form-control:focus{
+    box-shadow: 0 3px 10px 0 rgb(34 41 47 / 10%) !important;
+}

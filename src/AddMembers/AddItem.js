@@ -1,11 +1,27 @@
-import React from 'react'
+import React,{useState} from 'react'
+import './AddItem.css'
 
 const AddItem = () => {
+const [cost, setCost] = useState("")
+  const [serviceList, setServiceList] = useState([
+    {service:''},
+])
+  const addItem =()=>{
+    setServiceList([...serviceList , {service:""}])
+  } 
+
+  const removeItem = (index) =>{
+   const list = [...serviceList];
+    list.splice(index  , 1);
+    setServiceList(list);
+    }
+
   return (
     <>
         <form className="source-item">
-            <div data-repeater-list="group-a">
-              <div className="repeater-wrapper" data-repeater-item="">
+            <div>
+              {serviceList.map((singleService , index)=>
+              <div key={index} className="repeater-wrapper my-2">
                 <div className="row">
                   <div className="col-12 d-flex product-details-border position-relative pe-0 fs-6">
                     <div className="row w-100 pe-lg-0 pe-1 py-3">
@@ -30,9 +46,8 @@ const AddItem = () => {
                       <div className="col-lg-3 col-12 my-lg-0 my-2">
                         <p className="card-text col-title mb-md-2 mb-0">Cost</p>
                         <input
-                          type="text"
+                          type="number"
                           className="form-control"
-                          value="24"
                           placeholder="24"
                         />
                         <div className="mt-4">
@@ -63,7 +78,6 @@ const AddItem = () => {
                         <input
                           type="number"
                           className="form-control"
-                          value="1"
                           placeholder="1"
                         />
                       </div>
@@ -87,6 +101,7 @@ const AddItem = () => {
                         stroke-linejoin="round"
                         className="feather feather-x cursor-pointer font-medium-3"
                         data-repeater-delete=""
+                        onClick={(index)=>removeItem(index)}
                       >
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -185,13 +200,14 @@ const AddItem = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="row mt-3">
+              )}
+            </div> 
+            <div className="row">
               <div className="col-12 px-0">
                 <button
                   type="button"
                   className="btn btn-sm btn-primary"
-                  data-repeater-create=""
+                  data-repeater-create="" onClick={addItem}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -208,7 +224,7 @@ const AddItem = () => {
                     <line x1="12" y1="5" x2="12" y2="19"></line>
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                   </svg>
-                  <span className="align-middle">Add Item</span>
+                  <span className="align-middle" >Add Item</span>
                 </button>
               </div>
             </div>

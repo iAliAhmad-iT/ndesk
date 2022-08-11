@@ -18,6 +18,11 @@ margin: 0px 0px 0px auto;
     background-color: #ebe9f13c !important;   
 }
 
+.btn-block+.btn-block {
+    /* margin-top: 0.5rem; */
+    margin-top:0px !important;
+}
+
 
 
 .card {
@@ -185,5 +190,5 @@ select.form-control:not([multiple='multiple']) {
     outline: none !important;
     box-shadow: none!important;
     border-color: #7367F0 !important;
-
+    box-shadow: 0 3px 10px 0 rgb(34 41 47 / 10%) !important;    
 }

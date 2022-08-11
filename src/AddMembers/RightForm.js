@@ -7,7 +7,7 @@ const RightForm = () => {
     <div>
         <div className="card">
                 <div className="card-body">
-                  <SendInvoiceBtn name="Send Invoice"/>
+                  <SendInvoiceBtn name="Send Invoice" disable="false"/>
                   <PreviewBtn name="Preview"/>
                   <PreviewBtn name="Save"/>
                 </div>

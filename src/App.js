@@ -5,6 +5,7 @@ import SideBar from './SideBar/SideBar'
 import { BrowserRouter , Routes  , Route } from 'react-router-dom';
 // import Overview from './pages/Overview';
 import { Members, AddMembers, EditMembers, ViewMembers , ListMembers } from './Pages/Member';
+import  Form  from './Form';
 // import Team from './pages/Team';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route key={ListMembers} path='/Member/ListMember' exact element={<ListMembers/>}/>
      </Routes>
     </BrowserRouter> 
+    // <Form/>
   )
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import AddMember from '../SideBar/AddMember'; 
-import EditMember from '../SideBar/EditMember';
-import ListMember from '../SideBar/ListMember';
-import ViewMember from '../SideBar/ViewMember';
+import AddMember from '../AddMembers/AddMember'
+import EditMember from '../AddMembers/EditMember';
+import ListMember from '../AddMembers/ListMember';
+import ViewMember from '../AddMembers/ViewMember';
 
 export const Members = () => {
   return (
