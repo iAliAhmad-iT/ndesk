@@ -8,10 +8,14 @@ function SendInvoiceBtn(props) {
   const [from, setFrom] = useState("shelbyComapny@email.com")
   const [to, setTo] = useState("qConsolidated@email.com")
   const [subject, setSubject] = useState("Invoice of purchased Admin Templates")
-  const [message, setMessage] = useState("")
+  const [message, setMessage] = useState("ali")
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
+  const functionHandle = () => {
+    console.log([from,to,subject,message,])
+  }
 
   return (
     <>
@@ -78,6 +82,8 @@ function SendInvoiceBtn(props) {
                 id="invoice-message"
                 cols="3"
                 rows="11"
+                value={message}
+                onChange={(e)=>setMessage(e.target.value)}
               >
                 Dear Queen Consolidated, Thank you for your business, always a
                 pleasure to work with you! We have generated a new invoice in
@@ -111,7 +117,7 @@ function SendInvoiceBtn(props) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={functionHandle}>
             Save Changes
           </Button>
         </Modal.Footer>

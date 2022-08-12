@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import InvoiceHeader from "./InvoiceHeader";
+import MemberHeader from "./MemberHeader";
 import PaymentDeatils from './PaymentDetails'
 import AddItem from "./AddItem";
 import SalesPerson from "./SalesPerson";
@@ -9,6 +9,7 @@ import SendInvoiceBtn from './SendInvoiceBtn'
 import PreviewBtn from './PreviewBtn'
 import ToogleSwitch from "./ToogleSwitch";
 import AddPaymentBtn from "./AddPaymentBtn";
+import InvoiceToDetails from "./InvoiceToDetails";
 
 const EditMember = () => {
     const [toogled, setToogled] = useState(false);
@@ -20,7 +21,7 @@ const EditMember = () => {
             <div className="col-md-9">
               <div className="card d-flex">
                 {/* Header Start */}
-                <InvoiceHeader />
+                <MemberHeader/>
 
                 {/* HORIZONTAL ROW */}
                 <hr className="invoice-spacing" />
@@ -28,12 +29,7 @@ const EditMember = () => {
                 <div className="card-body invoice-padding pt-0">
                   <div className="row row-bill-to invoice-spacing">
                     <div className="col-xl-7 mb-lg-1 col-bill-to ps-0">
-                    <h6 className="invoice-to-title mb-2">Invoice To:</h6>
-                    <p className="mb-0">Thomas shelby</p>
-                    <p  className="mb-0">Shelby Company Limited</p>
-                    <p className="mb-0">Small Heath, B10 0HF, UK</p>
-                    <p className="mb-0">718-986-6062</p>
-                    <p className="mb-0">peakyFBlinders@gmail.com</p>
+                    <InvoiceToDetails/>
                     </div>
                     <div className="col-xl-5 pe-0 mt-xl-0 mt-2">
                       <PaymentDeatils />

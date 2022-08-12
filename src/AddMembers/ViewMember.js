@@ -8,6 +8,7 @@ import SubTotal from "./SubTotal";
 import SendInvoiceBtn from "./SendInvoiceBtn";
 import PreviewBtn from "./PreviewBtn";
 import AddPaymentBtn from "./AddPaymentBtn";
+import InvoiceToDetails from "./InvoiceToDetails";
 
 const ViewMember = () => {
   return (
@@ -24,12 +25,7 @@ const ViewMember = () => {
                 <div className="card-body invoice-padding pt-0">
                   <div className="row row-bill-to invoice-spacing">
                     <div className="col-xl-7 mb-lg-1 col-bill-to ps-0">
-                      <h6 className="invoice-to-title mb-2">Invoice To:</h6>
-                      <p className="mb-0">Thomas shelby</p>
-                      <p className="mb-0">Shelby Company Limited</p>
-                      <p className="mb-0">Small Heath, B10 0HF, UK</p>
-                      <p className="mb-0">718-986-6062</p>
-                      <p className="mb-0">peakyFBlinders@gmail.com</p>
+                      <InvoiceToDetails/>
                     </div>
                     <div className="col-xl-5 pe-0 mt-xl-0 mt-2">
                       <PaymentDetails />

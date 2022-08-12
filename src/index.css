@@ -78,3 +78,17 @@ body {
     opacity: 1;
     max-width: 11.21rem;
 }
+
+.item-options-menu {
+  min-width: 20rem !important;
+}
+
+.input-group:not(.bootstrap-touchspin):focus-within {
+  box-shadow: 0 3px 10px 0 rgb(34 41 47 / 10%) !important;
+  border-radius: 0.357rem !important;
+}
+
+
+.input-group:not(.bootstrap-touchspin):focus-within .form-control, .input-group:not(.bootstrap-touchspin):focus-within .input-group-text {
+  box-shadow: none !important;
+}

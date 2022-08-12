@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 const InvoiceTo = () => {
+  const [select, setSelect] = useState("")
   return (
     <>
        <h6 className="invoice-to-title">Invoice To:</h6>
@@ -10,10 +11,12 @@ const InvoiceTo = () => {
                   data-select2-id="3"
                   tabindex="-1"
                   aria-hidden="true"
-                >
-                  <option data-select2-id="5"></option>
-                  <option value="shelby">Shelby Company Limited</option>
-                  <option value="hunters">Hunters Corp</option>
+                  value={select}
+                  onChange={(e)=>setSelect(e.target.value)}
+                  >
+                  <option >Iqbal Bhai</option>
+                  <option >Shelby Company Limited</option>
+                  <option >Hunters Corp</option>
                 </select>
               </div>   
     </>

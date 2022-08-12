@@ -18,7 +18,14 @@ function SendInvoiceBtn(props) {
   const handleShow = () => setShow(true);
 
   const [date, setdate] = useState(new Date());
+  const [invoicebalance, setInvoiceBalance] = useState("ahmad");
+  const [paymentamount, setPaymentAmount] = useState("");
+  const [paymentmethod, setPaymentMethod ] = useState("");
+  const [paymentnote, setPaymentNote] = useState("");
 
+  const functionHandle = () => {
+    console.log([invoicebalance , date[0] , paymentamount , paymentmethod , paymentnote])
+  }
   return (
     <>
       <Button
@@ -36,14 +43,14 @@ function SendInvoiceBtn(props) {
         <Modal.Body>
           <form>
               <div class="form-group">
-                  <input id="balance" class="form-control" type="text" value="Invoice Balance: 5000.00" disabled="" /> 
+                  <input id="balance" class="form-control" type="text" value={invoicebalance} onChange={(e)=>setInvoiceBalance(e.target.value)}/> 
               </div>
               <div class="form-group">
-                  <label class="form-label" for="amount">Payment Amount</label>
-                  <input id="amount" class="form-control" type="number" placeholder="$1000" />
+                  <label class="form-label" htmlFor="amount">Payment Amount</label>
+                  <input id="amount" class="form-control" type="number" value={paymentamount} onChange={(e)=>setPaymentAmount(e.target.value)} placeholder="$1000" />
               </div>
               <div class="form-group">
-                  <label class="form-label" for="payment-date">Payment Date</label>
+                  <label class="form-label" htmlFor="payment-date">Payment Date</label>
                   <Flatpickr
                 className="form-control"
                 value={date}
@@ -52,8 +59,8 @@ function SendInvoiceBtn(props) {
               />
               </div>
               <div class="form-group">
-                  <label class="form-label" for="payment-method">Payment Method</label>
-                  <select class="form-control" id="payment-method">
+                  <label class="form-label" htmlFor="payment-method">Payment Method</label>
+                  <select class="form-control" id="payment-method" value={paymentmethod} onChange={(e)=>setPaymentMethod(e.target.value)}>
                       <option value="" selected="" disabled="">Select payment method</option>
                       <option value="Cash">Cash</option>
                       <option value="Bank Transfer">Bank Transfer</option>
@@ -63,8 +70,8 @@ function SendInvoiceBtn(props) {
                   </select>
               </div>
               <div class="form-group">
-                  <label class="form-label" for="payment-note">Internal Payment Note</label>
-                  <textarea class="form-control" id="payment-note" rows="5" placeholder="Internal Payment Note"></textarea>
+                  <label class="form-label" htmlFor="payment-note">Internal Payment Note</label>
+                  <textarea class="form-control" id="payment-note" rows="5" placeholder="Internal Payment Note" value={paymentnote} onChange={(e)=>setPaymentNote(e.target.value)}></textarea>
               </div>
 
           </form>
@@ -73,7 +80,7 @@ function SendInvoiceBtn(props) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={functionHandle}>
             Save Changes
           </Button>
         </Modal.Footer>

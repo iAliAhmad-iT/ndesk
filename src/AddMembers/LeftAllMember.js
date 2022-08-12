@@ -1,5 +1,5 @@
 import React from "react";
-import InvoiceHeader from "./InvoiceHeader";
+import MemberHeader from "./MemberHeader";
 import PaymentDeatils from "./PaymentDetails";
 import InvoiceTo from "./InvoiceTo";
 import AddItem from "./AddItem";
@@ -12,7 +12,7 @@ const LeftAllMember = () => {
       <div className="card d-flex">
 
         {/* Header Start */}
-        <InvoiceHeader />
+        <MemberHeader />
 
         {/* HORIZONTAL ROW */}
         <hr className="invoice-spacing" />

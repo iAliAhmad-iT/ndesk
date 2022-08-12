@@ -1,3 +1,8 @@
 .repeater-wrapper:not(:last-child) {
     margin-bottom: 22px !important;
 }
+
+
+.item-options-menu {
+    min-width: 20rem !important;
+  }
